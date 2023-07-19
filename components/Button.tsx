@@ -17,7 +17,10 @@ const Button = ({ title, leftIcon, rightIcon, handleClick,
     <button
       type={type || "button"}
       disabled={isSubmitting}
-      className="flexCenter gap-3 px-4 py-3"
+      className={`flexCenter gap-3 px-4 py-3
+      ${textColor || 'text-white'}
+      ${isSubmitting ? 'bg-black/50' : bgColor || 
+      'bg-green-500'} rounded-xl text-sm font-medium max-md:w-full`}
       onClick={handleClick}
     >
       {leftIcon && <Image src={leftIcon} width={14} height={14} alt="left" />}
