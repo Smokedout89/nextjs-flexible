@@ -41,6 +41,7 @@ export const fetchToken = async () => {
     const response = await fetch(`${serverUrl}/api/auth/token`);
     return response.json();
   } catch (error) {
+
     throw error;
   }
 }
